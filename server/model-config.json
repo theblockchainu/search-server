@@ -20,5 +20,9 @@
   "content": {
     "dataSource": "es",
     "public": true
+  },
+  "peer": {
+    "dataSource": "es",
+    "public": true
   }
 }

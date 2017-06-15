@@ -24,5 +24,17 @@
   "peer": {
     "dataSource": "es",
     "public": true
+  },
+  "community": {
+    "dataSource": "es",
+    "public": true
+  },
+  "profile": {
+    "dataSource": "es",
+    "public": true
+  },
+  "topic": {
+    "dataSource": "es",
+    "public": true
   }
 }

@@ -10,6 +10,7 @@
         "port": 443
       }
     ],
+    "defaultSize": 100,
     "apiVersion": "_default",
     "refreshOn": [
       "save",

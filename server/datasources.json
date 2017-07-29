@@ -2,7 +2,7 @@
   "es": {
     "name": "es",
     "connector": "es",
-    "index": "data",
+    "index": "testdata",
     "hosts": [
       {
         "protocol": "https",
@@ -11,7 +11,7 @@
       }
     ],
     "defaultSize": 100,
-    "apiVersion": "_default",
+    "apiVersion": "5.x",
     "refreshOn": [
       "save",
       "create",
@@ -19,10 +19,40 @@
     ],
     "log": "trace",
     "requestTimeout": 30000,
-    "amazonES": {
-      "region": "us-east-1",
-      "accessKey": "AKIAJEQ5JJ2KPRFGDMYA",
-      "secretKey": "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"
+
+    "mappings": [
+      {
+        "name": "topic",
+        "properties": {
+          "name": {
+            "type": "completion"
+          }
+        }
+      },
+      {
+        "name": "collection",
+        "properties": {
+          "title": {
+            "type": "completion"
+          }
+        }
+      },
+      {
+        "name": "content",
+        "properties": {
+          "title": {
+            "type": "completion"
+          }
+        }
+      }
+    ],
+    "settings": {
+      "index" : {
+        "blocks": {
+          "metadata": false,
+          "read_only": false
+        }
+      }
     }
   }
 }

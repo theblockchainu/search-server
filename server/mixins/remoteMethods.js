@@ -13,7 +13,7 @@ module.exports = function(Model, options) {
     Model.find(searchQuery, function(err, results) {
       if (!err) {
         cb(null, results);
-      }      else {
+      } else {
         console.trace(err.message);
         if (err) {
           return cb(err, null);

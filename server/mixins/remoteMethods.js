@@ -2,14 +2,15 @@
 module.exports = function(Model, options) {
   Model['suggestAll'] = function(field, query, cb) {
     console.log('form suggestion query here');
-    var searchQuery  = {};
+    var searchQuery = {};
     searchQuery.native = {};
-    searchQuery.native.suggest = {'suggests': {
-      'text': query,
-      'completion': {
-        'field': field,
-      },
-    }};
+    searchQuery.native.query = {};
+    searchQuery.native.query.match = {};
+    searchQuery.native.query.match[field] = {
+      'query': query,
+      'analyzer': 'standard',
+    };
+
     Model.find(searchQuery, function(err, results) {
       if (!err) {
         cb(null, results);

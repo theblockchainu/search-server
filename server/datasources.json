@@ -2,7 +2,7 @@
   "es": {
     "name": "elastic",
     "connector": "elastic",
-    "index": "testdata",
+    "index": "data",
     "hosts": [
       {
         "protocol": "https",
@@ -19,29 +19,73 @@
     ],
     "log": "trace",
     "requestTimeout": 30000,
-
     "mappings": [
       {
         "name": "topic",
+        "index": "topic",
+        "type": "system",
         "properties": {
           "name": {
-            "type": "completion"
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
           }
         }
       },
       {
         "name": "collection",
+        "index": "collection",
+        "type": "workshop",
         "properties": {
           "title": {
-            "type": "completion"
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
           }
         }
       },
       {
         "name": "content",
+        "index": "content",
+        "type": "online",
         "properties": {
           "title": {
-            "type": "completion"
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "peer",
+        "index": "peer",
+        "type": "true",
+        "properties": {
+          "username": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "profiles" : {
+            "properties": {
+              "first_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              },
+              "last_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              }
+            }
+          },
+          "full_name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
           }
         }
       }
@@ -51,6 +95,26 @@
         "blocks": {
           "metadata": false,
           "read_only": false
+        }
+      },
+      "number_of_shards": 1,
+      "analysis": {
+        "filter": {
+          "autocomplete_filter": {
+            "type":     "edge_ngram",
+            "min_gram": 1,
+            "max_gram": 20
+          }
+        },
+        "analyzer": {
+          "autocomplete": {
+            "type":      "custom",
+            "tokenizer": "standard",
+            "filter": [
+              "lowercase",
+              "autocomplete_filter"
+            ]
+          }
         }
       }
     }

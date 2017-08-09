@@ -11,7 +11,7 @@
       }
     ],
     "defaultSize": 100,
-    "apiVersion": "5.x",
+    "apiVersion": "5.1",
     "refreshOn": [
       "save",
       "create",

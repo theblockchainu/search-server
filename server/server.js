@@ -9,7 +9,7 @@ var app = module.exports = loopback();
 app.get('/searchAll', function(req, res, next) {
   var Peer = app.models.peer;
   var filter = {};
-  filter.index = '_all';
+  filter.index = 'collection,topic,peer';
   filter.body = {
     'query': {
       'multi_match': {

@@ -88,6 +88,282 @@
             "search_analyzer": "standard"
           }
         }
+      },
+      {
+        "name": "aakash_topic",
+        "index": "aakash_topic",
+        "type": "system",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "aakash_collection",
+        "index": "aakash_collection",
+        "type": "workshop",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "aakash_content",
+        "index": "aakash_content",
+        "type": "online",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "aakash_peer",
+        "index": "aakash_peer",
+        "type": "true",
+        "properties": {
+          "username": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "profiles" : {
+            "properties": {
+              "first_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              },
+              "last_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              }
+            }
+          },
+          "full_name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "ritika_topic",
+        "index": "ritika_topic",
+        "type": "system",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "ritika_collection",
+        "index": "ritika_collection",
+        "type": "workshop",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "ritika_content",
+        "index": "ritika_content",
+        "type": "online",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "ritika_peer",
+        "index": "ritika_peer",
+        "type": "true",
+        "properties": {
+          "username": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "profiles" : {
+            "properties": {
+              "first_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              },
+              "last_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              }
+            }
+          },
+          "full_name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "abhijeet_topic",
+        "index": "abhijeet_topic",
+        "type": "system",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "abhijeet_collection",
+        "index": "abhijeet_collection",
+        "type": "workshop",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "abhijeet_content",
+        "index": "abhijeet_content",
+        "type": "online",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "abhijeet_peer",
+        "index": "abhijeet_peer",
+        "type": "true",
+        "properties": {
+          "username": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "profiles" : {
+            "properties": {
+              "first_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              },
+              "last_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              }
+            }
+          },
+          "full_name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "sahana_topic",
+        "index": "sahana_topic",
+        "type": "system",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "sahana_collection",
+        "index": "sahana_collection",
+        "type": "workshop",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "sahana_content",
+        "index": "sahana_content",
+        "type": "online",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "sahana_peer",
+        "index": "sahana_peer",
+        "type": "true",
+        "properties": {
+          "username": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "profiles" : {
+            "properties": {
+              "first_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              },
+              "last_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              }
+            }
+          },
+          "full_name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       }
     ],
     "settings": {

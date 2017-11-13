@@ -19,5 +19,8 @@
     },
     "cors": false
   },
+  "swagger": {
+    "protocol": "https"
+  },
   "uniqueDeveloperCode": "aakash"
 }

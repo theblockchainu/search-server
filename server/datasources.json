@@ -364,6 +364,75 @@
             "search_analyzer": "standard"
           }
         }
+      },
+      {
+        "name": "dev_topic",
+        "index": "dev_topic",
+        "type": "system",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "dev_collection",
+        "index": "dev_collection",
+        "type": "workshop",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "dev_content",
+        "index": "dev_content",
+        "type": "online",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "dev_peer",
+        "index": "dev_peer",
+        "type": "true",
+        "properties": {
+          "username": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "profiles" : {
+            "properties": {
+              "first_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              },
+              "last_name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "full_name"
+              }
+            }
+          },
+          "full_name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       }
     ],
     "settings": {

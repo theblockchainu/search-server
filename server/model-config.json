@@ -36,5 +36,25 @@
   "topic": {
     "dataSource": "es",
     "public": true
+  },
+  "aakash_topic": {
+    "dataSource": "es",
+    "public": true
+  },
+  "ritika_topic": {
+    "dataSource": "es",
+    "public": true
+  },
+  "abhijeet_topic": {
+    "dataSource": "es",
+    "public": true
+  },
+  "sahana_topic": {
+    "dataSource": "es",
+    "public": true
+  },
+  "dev_topic": {
+    "dataSource": "es",
+    "public": true
   }
 }

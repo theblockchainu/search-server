@@ -14,7 +14,7 @@ app.get('/searchAll', function(req, res, next) {
   var codeString = app.get('uniqueDeveloperCode') + '_';
   var indexString = codeString + 'collection,' + codeString + 'topic,' + codeString + 'peer';
   var filter = {};
-  filter.index = 'collection,topic,peer';
+  filter.index = indexString;
   filter.body = {
     'query': {
       'multi_match': {
@@ -59,7 +59,7 @@ app.start = function(httpOnly) {
   }
   // start the web server
   server.listen(app.get('port'), function() {
-    var baseUrl = (httpOnly? 'http://' : 'https://') + app.get('host') + ':' + app.get('port');
+    var baseUrl = (httpOnly ? 'http://' : 'https://') + app.get('host') + ':' + app.get('port');
     app.emit('started', baseUrl);
     console.log('Web server listening at: %s', baseUrl);
     if (app.get('loopback-component-explorer')) {

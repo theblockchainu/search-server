@@ -12,7 +12,7 @@ var app = module.exports = loopback();
 app.get('/searchAll', function(req, res, next) {
   var Peer = app.models.peer;
   var codeString = app.get('uniqueDeveloperCode') + '_';
-  var indexString = codeString + 'collection,' + codeString + 'topic,' + codeString + 'peer';
+  var indexString = codeString + 'collection,' + codeString + 'topic,' + codeString + 'peer' + codeString + 'community';
   var filter = {};
   filter.index = indexString;
   filter.body = {

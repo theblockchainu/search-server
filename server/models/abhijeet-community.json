@@ -1,12 +1,9 @@
 {
-  "name": "community",
+  "name": "abhijeet_community",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
-  },
-  "mixins": {
-    "RemoteMethods": true
   },
   "properties": {
     "id": {

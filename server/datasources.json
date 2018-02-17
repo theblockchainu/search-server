@@ -1,6 +1,6 @@
 {
   "es": {
-    "name": "elastic",
+    "name": "es",
     "connector": "elastic",
     "index": "data",
     "hosts": [
@@ -66,7 +66,7 @@
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
           },
-          "profiles" : {
+          "profiles": {
             "properties": {
               "first_name": {
                 "type": "text",
@@ -83,6 +83,28 @@
             }
           },
           "full_name": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "community",
+        "index": "community",
+        "type": "system",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "headline": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "description": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
@@ -135,7 +157,7 @@
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
           },
-          "profiles" : {
+          "profiles": {
             "properties": {
               "first_name": {
                 "type": "text",
@@ -159,68 +181,21 @@
         }
       },
       {
-        "name": "ritika_topic",
-        "index": "ritika_topic",
+        "name": "aakash_community",
+        "index": "aakash_community",
         "type": "system",
         "properties": {
-          "name": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "standard"
-          }
-        }
-      },
-      {
-        "name": "ritika_collection",
-        "index": "ritika_collection",
-        "type": "workshop",
-        "properties": {
           "title": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
-          }
-        }
-      },
-      {
-        "name": "ritika_content",
-        "index": "ritika_content",
-        "type": "online",
-        "properties": {
-          "title": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "standard"
-          }
-        }
-      },
-      {
-        "name": "ritika_peer",
-        "index": "ritika_peer",
-        "type": "true",
-        "properties": {
-          "username": {
+          },
+          "headline": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
           },
-          "profiles" : {
-            "properties": {
-              "first_name": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "standard",
-                "copy_to": "full_name"
-              },
-              "last_name": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "standard",
-                "copy_to": "full_name"
-              }
-            }
-          },
-          "full_name": {
+          "description": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
@@ -273,7 +248,7 @@
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
           },
-          "profiles" : {
+          "profiles": {
             "properties": {
               "first_name": {
                 "type": "text",
@@ -297,68 +272,21 @@
         }
       },
       {
-        "name": "sahana_topic",
-        "index": "sahana_topic",
+        "name": "abhijeet_community",
+        "index": "abhijeet_community",
         "type": "system",
         "properties": {
-          "name": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "standard"
-          }
-        }
-      },
-      {
-        "name": "sahana_collection",
-        "index": "sahana_collection",
-        "type": "workshop",
-        "properties": {
           "title": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
-          }
-        }
-      },
-      {
-        "name": "sahana_content",
-        "index": "sahana_content",
-        "type": "online",
-        "properties": {
-          "title": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "standard"
-          }
-        }
-      },
-      {
-        "name": "sahana_peer",
-        "index": "sahana_peer",
-        "type": "true",
-        "properties": {
-          "username": {
+          },
+          "headline": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
           },
-          "profiles" : {
-            "properties": {
-              "first_name": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "standard",
-                "copy_to": "full_name"
-              },
-              "last_name": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "standard",
-                "copy_to": "full_name"
-              }
-            }
-          },
-          "full_name": {
+          "description": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
@@ -411,7 +339,7 @@
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
           },
-          "profiles" : {
+          "profiles": {
             "properties": {
               "first_name": {
                 "type": "text",
@@ -433,10 +361,32 @@
             "search_analyzer": "standard"
           }
         }
-      }
+      },
+      {
+        "name": "dev_community",
+        "index": "dev_community",
+        "type": "system",
+        "properties": {
+          "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "headline": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "description": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
     ],
     "settings": {
-      "index" : {
+      "index": {
         "blocks": {
           "metadata": false,
           "read_only": false
@@ -446,14 +396,14 @@
       "analysis": {
         "filter": {
           "autocomplete_filter": {
-            "type":     "edge_ngram",
+            "type": "edge_ngram",
             "min_gram": 1,
             "max_gram": 20
           }
         },
         "analyzer": {
           "autocomplete": {
-            "type":      "custom",
+            "type": "custom",
             "tokenizer": "standard",
             "filter": [
               "lowercase",

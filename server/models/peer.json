@@ -6,7 +6,7 @@
     "validateUpsert": true
   },
   "mixins": {
-    "RemoteMethods" : true
+    "RemoteMethods": true
   },
   "properties": {
     "id": {

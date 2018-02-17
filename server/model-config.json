@@ -56,5 +56,17 @@
   "dev_topic": {
     "dataSource": "es",
     "public": true
+  },
+  "aakash_community": {
+    "dataSource": "es",
+    "public": true
+  },
+  "abhijeet_community": {
+    "dataSource": "es",
+    "public": true
+  },
+  "dev_community": {
+    "dataSource": "es",
+    "public": true
   }
 }

@@ -5,6 +5,9 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "RemoteMethods": true
+  },
   "properties": {
     "id": {
       "type": "string",

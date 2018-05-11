@@ -1,5 +1,5 @@
 {
-  "name": "peer",
+  "name": "aakash_content",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,52 +11,45 @@
   "properties": {
     "id": {
       "type": "string",
-      "required": true
+      "id": true
     },
-    "username": {
-      "type": "string"
-    },
-    "password": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "ethAddress": {
+    "type": {
       "type": "string"
     },
-    "ethKeyStore": {
+    "description": {
       "type": "string"
     },
-    "email": {
+    "supplementUrls": {
+      "type": [
+        "string"
+      ]
+    },
+    "requireRSVP": {
+      "type": "boolean"
+    },
+    "itemsProvided": {
+      "type": [
+        "string"
+      ]
+    },
+    "notes": {
       "type": "string"
     },
-    "phone": {
-      "type": "number"
+    "imageUrl": {
+      "type": "string"
     },
-    "phoneVerified": {
+    "prerequisites": {
+      "type": "string"
+    },
+    "sessionIsApproved": {
       "type": "boolean",
       "default": false
     },
-    "emailVerified": {
-      "type": "boolean",
-      "default": false
-    },
-    "phoneVerificationToken": {
-      "type": "string"
-    },
-    "verificationToken": {
-      "type": "string"
-    },
-    "verificationTokenTime": {
-      "type": "string"
-    },
-    "accountVerified": {
-      "type": "boolean",
-      "default": false
-    },
-    "verificationIdUrl": {
-      "type": "string"
-    },
-    "isAdmin": {
+    "sessionIsRejected": {
       "type": "boolean",
       "default": false
     }

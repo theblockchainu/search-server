@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 'use strict';
 module.exports = function(Model, options) {
   Model['suggestAll'] = function(field, query, cb) {
@@ -8,7 +9,7 @@ module.exports = function(Model, options) {
     searchQuery.native.query.match = {};
     searchQuery.native.query.match[field] = {
       'query': query,
-      'analyzer': 'standard',
+      'analyzer': 'standard'
     };
 
     Model.find(searchQuery, function(err, results) {
@@ -28,10 +29,10 @@ module.exports = function(Model, options) {
     {
       accepts: [
         {arg: 'field', type: 'string', required: true},
-        {arg: 'query', type: 'string', required: true},
+        {arg: 'query', type: 'string', required: true}
       ],
       returns: {arg: 'suggestions', type: 'object', root: true},
-      http: {path: '/suggest', verb: 'get'},
+      http: {path: '/suggest', verb: 'get'}
     }
   );
 };

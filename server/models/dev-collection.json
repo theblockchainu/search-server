@@ -1,5 +1,5 @@
 {
-  "name": "collection",
+  "name": "dev_collection",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

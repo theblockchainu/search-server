@@ -1,5 +1,5 @@
 {
-  "name": "peer",
+  "name": "dev_peer",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

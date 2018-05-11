@@ -41,15 +41,7 @@
     "dataSource": "es",
     "public": true
   },
-  "ritika_topic": {
-    "dataSource": "es",
-    "public": true
-  },
   "abhijeet_topic": {
-    "dataSource": "es",
-    "public": true
-  },
-  "sahana_topic": {
     "dataSource": "es",
     "public": true
   },
@@ -66,6 +58,30 @@
     "public": true
   },
   "dev_community": {
+    "dataSource": "es",
+    "public": true
+  },
+  "aakash_collection": {
+    "dataSource": "es",
+    "public": true
+  },
+  "dev_collection": {
+    "dataSource": "es",
+    "public": true
+  },
+  "aakash_peer": {
+    "dataSource": "es",
+    "public": true
+  },
+  "dev_peer": {
+    "dataSource": "es",
+    "public": true
+  },
+  "aakash_content": {
+    "dataSource": "es",
+    "public": true
+  },
+  "dev_content": {
     "dataSource": "es",
     "public": true
   }

@@ -20,14 +20,38 @@
     "type": {
       "type": "string"
     },
-    "url": {
+    "description": {
       "type": "string"
     },
-    "created": {
-      "type": "date"
+    "supplementUrls": {
+      "type": [
+        "string"
+      ]
     },
-    "modified": {
-      "type": "date"
+    "requireRSVP": {
+      "type": "boolean"
+    },
+    "itemsProvided": {
+      "type": [
+        "string"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "prerequisites": {
+      "type": "string"
+    },
+    "sessionIsApproved": {
+      "type": "boolean",
+      "default": false
+    },
+    "sessionIsRejected": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],

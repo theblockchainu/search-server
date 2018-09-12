@@ -1,3 +1,4 @@
 {
-  "extends": "loopback"
+  "extends": "loopback",
+  "max-len": "500"
 }

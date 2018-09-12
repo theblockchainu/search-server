@@ -12,14 +12,48 @@ var app = module.exports = loopback();
 app.get('/searchAll', function(req, res, next) {
   var Peer = app.models.peer;
   var codeString = app.get('uniqueDeveloperCode') + '_';
-  var indexString = codeString + 'collection,' + codeString + 'topic,' + codeString + 'peer,' + codeString + 'community';
+  var indexString = codeString + 'collection,' + codeString + 'topic,' + codeString + 'peer,' + codeString + 'community,' + codeString + 'question,' + codeString + 'content';
   var filter = {};
   filter.index = indexString;
   filter.body = {
     'query': {
       'multi_match': {
         'query': req.query.query,
-        'fields': ['title', 'name', 'username', 'profiles.first_name', 'profiles.last_name'],
+        'fields': ['title', 'name', 'username', 'profiles.first_name', 'profiles.last_name', 'text'],
+      },
+    },
+  };
+  client.search(filter, function(err, resp, status) {
+    if (err) {
+      res.json(err);
+    }    else {
+      var result = [];
+      if (resp.hits.hits) {
+        resp.hits.hits.forEach(function(resultItem) {
+          var newResultFormat = {};
+          newResultFormat.index = resultItem._index;
+          newResultFormat.data = resultItem._source;
+          result.push(newResultFormat);
+        });
+        res.json(result);
+      }      else {
+        res.json(resp);
+      }
+    }
+  });
+});
+
+app.get('/searchCommunity', function(req, res, next) {
+  var Peer = app.models.peer;
+  var codeString = app.get('uniqueDeveloperCode') + '_';
+  var indexString = codeString + 'question';
+  var filter = {};
+  filter.index = indexString;
+  filter.body = {
+    'query': {
+      'multi_match': {
+        'query': req.query.query,
+        'fields': ['text'],
       },
     },
   };
@@ -74,7 +108,7 @@ app.start = function(httpOnly) {
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
   if (err) throw err;
-
+  
   // start the server if `$ node server.js`
   if (require.main === module)
     app.start();

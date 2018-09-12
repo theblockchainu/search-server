@@ -84,5 +84,17 @@
   "dev_content": {
     "dataSource": "es",
     "public": true
+  },
+  "aakash_question": {
+    "dataSource": "es",
+    "public": true
+  },
+  "dev_question": {
+    "dataSource": "es",
+    "public": true
+  },
+  "question": {
+    "dataSource": "es",
+    "public": true
   }
 }

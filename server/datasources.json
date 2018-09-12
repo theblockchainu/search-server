@@ -112,6 +112,18 @@
         }
       },
       {
+        "name": "question",
+        "index": "question",
+        "type": "user",
+        "properties": {
+          "text": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
         "name": "aakash_topic",
         "index": "aakash_topic",
         "type": "system",
@@ -196,6 +208,18 @@
             "search_analyzer": "standard"
           },
           "description": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "aakash_question",
+        "index": "aakash_question",
+        "type": "user",
+        "properties": {
+          "text": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
@@ -378,6 +402,18 @@
             "search_analyzer": "standard"
           },
           "description": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
+        "name": "dev_question",
+        "index": "dev_question",
+        "type": "user",
+        "properties": {
+          "text": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"

@@ -41,6 +41,21 @@
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
+          },
+          "topics": {
+            "properties": {
+              "name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "topic_string"
+              }
+            }
+          },
+          "topic_string": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
           }
         }
       },
@@ -141,6 +156,21 @@
         "type": "collection",
         "properties": {
           "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "topics": {
+            "properties": {
+              "name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "topic_string"
+              }
+            }
+          },
+          "topic_string": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
@@ -247,6 +277,21 @@
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"
+          },
+          "topics": {
+            "properties": {
+              "name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "topic_string"
+              }
+            }
+          },
+          "topic_string": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
           }
         }
       },
@@ -347,6 +392,21 @@
         "type": "collection",
         "properties": {
           "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          },
+          "topics": {
+            "properties": {
+              "name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard",
+                "copy_to": "topic_string"
+              }
+            }
+          },
+          "topic_string": {
             "type": "text",
             "analyzer": "autocomplete",
             "search_analyzer": "standard"

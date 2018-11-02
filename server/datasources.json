@@ -6,12 +6,12 @@
     "hosts": [
       {
         "protocol": "https",
-        "host": "search-peerbuds-ql7jgie76k6ul5rzrbj3e2adcm.us-east-1.es.amazonaws.com",
+        "host": "search-theblockchainu-lffodx6wmavggohb6y3uamyrze.us-east-1.es.amazonaws.com",
         "port": 443
       }
     ],
     "defaultSize": 100,
-    "apiVersion": "5.1",
+    "apiVersion": "6.x",
     "refreshOn": [
       "save",
       "create",

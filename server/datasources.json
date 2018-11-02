@@ -23,7 +23,7 @@
       {
         "name": "topic",
         "index": "topic",
-        "type": "system",
+        "type": "topic",
         "properties": {
           "name": {
             "type": "text",
@@ -35,7 +35,7 @@
       {
         "name": "collection",
         "index": "collection",
-        "type": "workshop",
+        "type": "collection",
         "properties": {
           "title": {
             "type": "text",
@@ -47,7 +47,7 @@
       {
         "name": "content",
         "index": "content",
-        "type": "online",
+        "type": "content",
         "properties": {
           "title": {
             "type": "text",
@@ -59,7 +59,7 @@
       {
         "name": "peer",
         "index": "peer",
-        "type": "true",
+        "type": "peer",
         "properties": {
           "username": {
             "type": "text",
@@ -92,7 +92,7 @@
       {
         "name": "community",
         "index": "community",
-        "type": "system",
+        "type": "community",
         "properties": {
           "title": {
             "type": "text",
@@ -114,7 +114,7 @@
       {
         "name": "question",
         "index": "question",
-        "type": "user",
+        "type": "question",
         "properties": {
           "text": {
             "type": "text",
@@ -126,7 +126,7 @@
       {
         "name": "aakash_topic",
         "index": "aakash_topic",
-        "type": "system",
+        "type": "topic",
         "properties": {
           "name": {
             "type": "text",
@@ -138,7 +138,7 @@
       {
         "name": "aakash_collection",
         "index": "aakash_collection",
-        "type": "workshop",
+        "type": "collection",
         "properties": {
           "title": {
             "type": "text",
@@ -150,7 +150,7 @@
       {
         "name": "aakash_content",
         "index": "aakash_content",
-        "type": "online",
+        "type": "content",
         "properties": {
           "title": {
             "type": "text",
@@ -162,7 +162,7 @@
       {
         "name": "aakash_peer",
         "index": "aakash_peer",
-        "type": "true",
+        "type": "peer",
         "properties": {
           "username": {
             "type": "text",
@@ -195,7 +195,7 @@
       {
         "name": "aakash_community",
         "index": "aakash_community",
-        "type": "system",
+        "type": "community",
         "properties": {
           "title": {
             "type": "text",
@@ -217,7 +217,7 @@
       {
         "name": "aakash_question",
         "index": "aakash_question",
-        "type": "user",
+        "type": "question",
         "properties": {
           "text": {
             "type": "text",
@@ -229,7 +229,7 @@
       {
         "name": "abhijeet_topic",
         "index": "abhijeet_topic",
-        "type": "system",
+        "type": "topic",
         "properties": {
           "name": {
             "type": "text",
@@ -241,7 +241,7 @@
       {
         "name": "abhijeet_collection",
         "index": "abhijeet_collection",
-        "type": "workshop",
+        "type": "collection",
         "properties": {
           "title": {
             "type": "text",
@@ -253,7 +253,7 @@
       {
         "name": "abhijeet_content",
         "index": "abhijeet_content",
-        "type": "online",
+        "type": "content",
         "properties": {
           "title": {
             "type": "text",
@@ -265,7 +265,7 @@
       {
         "name": "abhijeet_peer",
         "index": "abhijeet_peer",
-        "type": "true",
+        "type": "peer",
         "properties": {
           "username": {
             "type": "text",
@@ -298,7 +298,7 @@
       {
         "name": "abhijeet_community",
         "index": "abhijeet_community",
-        "type": "system",
+        "type": "community",
         "properties": {
           "title": {
             "type": "text",
@@ -318,9 +318,21 @@
         }
       },
       {
+        "name": "abhijeet_question",
+        "index": "abhijeet_question",
+        "type": "question",
+        "properties": {
+          "text": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      {
         "name": "dev_topic",
         "index": "dev_topic",
-        "type": "system",
+        "type": "topic",
         "properties": {
           "name": {
             "type": "text",
@@ -332,7 +344,7 @@
       {
         "name": "dev_collection",
         "index": "dev_collection",
-        "type": "workshop",
+        "type": "collection",
         "properties": {
           "title": {
             "type": "text",
@@ -344,7 +356,7 @@
       {
         "name": "dev_content",
         "index": "dev_content",
-        "type": "online",
+        "type": "content",
         "properties": {
           "title": {
             "type": "text",
@@ -356,7 +368,7 @@
       {
         "name": "dev_peer",
         "index": "dev_peer",
-        "type": "true",
+        "type": "peer",
         "properties": {
           "username": {
             "type": "text",
@@ -389,7 +401,7 @@
       {
         "name": "dev_community",
         "index": "dev_community",
-        "type": "system",
+        "type": "community",
         "properties": {
           "title": {
             "type": "text",
@@ -411,7 +423,7 @@
       {
         "name": "dev_question",
         "index": "dev_question",
-        "type": "user",
+        "type": "question",
         "properties": {
           "text": {
             "type": "text",
